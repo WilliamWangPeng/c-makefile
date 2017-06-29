@@ -1,1 +1,1 @@
-void myPrintHelloMake(void);
+void printf(void);
