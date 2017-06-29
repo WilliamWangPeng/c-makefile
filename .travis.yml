@@ -33,7 +33,7 @@ script:
   - ${CC} --coverage helloworld.o -o helloworld
   - ./helloworld
   - sonar-scanner
-  
+  - make
 compiler:
   - gcc
   - clang
