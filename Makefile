@@ -1,16 +1,7 @@
-CC=gcc
-CFLAGS=-c -Wall
-
-all: hello
-
-hello: helloworld.o hello.o
-    $(CC) helloworld.o hello.o -o hello
-
-helloworld.o: helloworld.c
-    $(CC) $(CFLAGS) helloworld.c
-
-hello.o: hello.c
-    $(CC) $(CFLAGS) hello.c
+all: helloworld.c hello.c
+    gcc hello.c -o hello -g
+    gcc helloworld.c -o helloworld -g -lcryptopp
 
 clean:
-    rm *o hello
+    rm hello
+    rm helloworld
