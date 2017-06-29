@@ -1,5 +1,8 @@
 CC=gcc
-CFLAGS=-I.
+CFLAGS=-c -Wall
 
 helloworld: helloworld.o
-     ${CC} -o helloworld helloworld.o -I.
+     $(CC) helloworld.o -o helloworld
+
+clean:
+     rm *o helloworld
