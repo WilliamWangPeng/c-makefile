@@ -4,3 +4,5 @@
 [![Quality Gate](https://sonarqube.com/api/badges/gate?key=c-makefile%3Amaster)](https://sonarqube.com/dashboard?id=c-makefile%3Amaster)
 
 Link to [Doxygen documentation](https://laurelmcintyre.github.io/c-makefile/html/)
+
+Link to [documentation repo](https://github.com/laurelmcintyre/documentation)
