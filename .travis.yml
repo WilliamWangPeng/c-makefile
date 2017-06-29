@@ -10,7 +10,7 @@ branches:
 
 env:
   global:
-    - GH_REPO_NAME: c
+    - GH_REPO_NAME: c-makefile
     - DOXYFILE: $TRAVIS_BUILD_DIR/DOXYFILE
     - GH_REPO_REF: github.com/laurelmcintyre/c-makefile.git
 
