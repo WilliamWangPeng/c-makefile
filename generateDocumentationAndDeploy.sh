@@ -5,8 +5,8 @@ set -e
 mkdir code_docs
 cd code_docs
 
-git clone -b gh-pages https://github.com/laurelmcintyre/c c
-cd c
+git clone -b gh-pages https://github.com/laurelmcintyre/c-makefile c-makefile
+cd c-makefile
 
 git config --global push.default simple
 git config user.name "Travis CI"
