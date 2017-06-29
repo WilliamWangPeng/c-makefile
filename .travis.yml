@@ -12,7 +12,7 @@ env:
   global:
     - GH_REPO_NAME: c
     - DOXYFILE: $TRAVIS_BUILD_DIR/DOXYFILE
-    - GH_REPO_REF: github.com/laurelmcintyre/c.git
+    - GH_REPO_REF: github.com/laurelmcintyre/c-makefile.git
 
 addons:
   sonarcloud:
