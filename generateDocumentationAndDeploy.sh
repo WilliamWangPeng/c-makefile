@@ -5,8 +5,8 @@ set -e
 mkdir code_docs
 cd code_docs
 
-git clone -b gh-pages https://github.com/laurelmcintyre/c-makefile c-makefile
-cd c-makefile
+git clone -b gh-pages https://github.com/${TRAVIS_REPO_SLUG}
+cd ${TRAVIS_REPO_SLUG##*/}
 
 git config --global push.default simple
 git config user.name "Travis CI"
@@ -29,7 +29,7 @@ if [ -d "html" ] && [ -f "html/index.html" ]; then
     git commit -m "Deploy code docs to GitHub Pages Travis build: ${TRAVIS_BUILD_NUMBER}" -m "Commit: ${TRAVIS_COMMIT}"
 
    
-    git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}" > /dev/null 2>&1
+    git push --force "git@github.com:${TRAVIS_REPO_SLUG}" > /dev/null 2>&1
 else
     echo '' >&2
     echo 'Warning: No documentation (html) files have been found!' >&2
