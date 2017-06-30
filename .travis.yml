@@ -30,7 +30,7 @@ before_install:
 
 script:
   - make CFLAGS="--coverage" LDFLAGS="--coverage"
-  - ./helloworld
+  - make test
   - sonar-scanner
 
 compiler:
