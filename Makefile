@@ -17,6 +17,9 @@ $(NAME): $(OBJS)
 #clean up rule
 clean:
 	rm -f $(NAME) $(OBJS)
+	
+test: $(NAME)
+	./$(NAME)
 
 #all, clean are phony rules, e.g. they should always run
-.PHONY: all clean
+.PHONY: all clean test
