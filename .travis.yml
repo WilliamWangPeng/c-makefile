@@ -29,11 +29,10 @@ before_install:
   - ccache -z
 
 script:
-  - ${CC} --coverage -c helloworld.c -o helloworld.o
-  - ${CC} --coverage helloworld.o -o helloworld
+  - make CFLAGS="--coverage"
   - ./helloworld
   - sonar-scanner
-  - make
+
 compiler:
   - gcc
   - clang
