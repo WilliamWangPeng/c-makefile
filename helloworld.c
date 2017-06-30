@@ -1,12 +1,11 @@
 #include <stdio.h>
-
+ 
 /// \file
 
 /** \brief a helloworld program in c
  */
-
-int main() 
+int main()
 {
-    printf("Hello World");
-    return 0;
- }
+  printf("Hello World");
+  return 0;
+}
