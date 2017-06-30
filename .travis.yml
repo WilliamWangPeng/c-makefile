@@ -46,8 +46,9 @@ after_success:
     fi
   - cd $TRAVIS_BUILD_DIR
   - chmod +x generateDocumentationAndDeploy.sh
-  - ./generateDocumentationAndDeploy.sh
-  
+  - if [[ ${TRAVIS_JOB_NUMBER} = *.1 ]]; then 
+         ./generateDocumentationAndDeploy.sh
+    fi
 cache:
   ccache: true
   directories:
