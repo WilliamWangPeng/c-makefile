@@ -29,7 +29,7 @@ before_install:
   - ccache -z
 
 script:
-  - make CFLAGS="--coverage"
+  - make CFLAGS="--coverage" LDFLAGS="--coverage"
   - ./helloworld
   - sonar-scanner
 
