@@ -10,9 +10,7 @@ branches:
 
 env:
   global:
-    - GH_REPO_NAME: c-makefile
     - DOXYFILE: $TRAVIS_BUILD_DIR/DOXYFILE
-    - GH_REPO_REF: github.com/laurelmcintyre/c-makefile.git
 
 addons:
   sonarcloud:
@@ -47,6 +45,7 @@ after_success:
   - cd $TRAVIS_BUILD_DIR
   - chmod +x generateDocumentationAndDeploy.sh
   - if [[ ${TRAVIS_JOB_NUMBER} = *.1 ]]; then ./generateDocumentationAndDeploy.sh; fi
+  
 cache:
   ccache: true
   directories:
